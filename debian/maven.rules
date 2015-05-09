@@ -1,0 +1,4 @@
+
+jline jline jar s/2\..*/2.x/ * *
+junit junit jar s/4\..*/4.x/ * *
+org.diskfish.debian debmypom jar * * *

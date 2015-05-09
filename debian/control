@@ -1,0 +1,29 @@
+Source: debmypom
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Scott Wakeling <scott@diskfish.org>
+Build-Depends: debhelper (>= 9), cdbs, default-jdk, maven-debian-helper (>= 1.5)
+Build-Depends-Indep: libjline2-java, junit4, default-jdk-doc, libmaven-javadoc-plugin-java 
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-java/debmypom.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/debmypom.git
+Homepage: http://maven.apache.org
+
+Package: debmypom
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}
+Suggests: ${maven:OptionalDepends}, debmypom-doc
+Description: debmypom
+ Demo packaging program
+
+Package: debmypom-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Recommends: ${maven:DocDepends}, ${maven:DocOptionalDepends}
+Suggests: debmypom
+Description: Documentation for debmypom
+ Demo packaging program
+ .
+ This package contains the API documentation of debmypom.
